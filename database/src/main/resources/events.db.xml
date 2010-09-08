@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+
+	<organizer organizer_id="1" name="Bekk" link="http://www.bekk.no" />
+	<organizer organizer_id="2" name="JavaZone" link="http://www.javazone.no" />
+	<organizer organizer_id="3" name="JavaBin" link="http://www.aftenposten.no" />
+	<organizer organizer_id="4" name="Øyvind" link="www.twitter.com/kvangaball" />
+	<organizer organizer_id="5" name="Vegard" link="http://no.linkedin.com/pub/vegard-hartmann/2/357/474" />
+
+    <location location_id="1" name="Dattera til Hagen" description="" />
+    <location location_id="2" name="Gloria Flames" description="" />
+    <location location_id="3" name="Cafe con Bar" description="" />
+    <location location_id="4" name="Ivars" description="" />
+    <location location_id="5" name="Bekk Stand" description="Standen til Bekk Consulting AS på årets JavaZone" />
+
+	<event event_id="1" name="Piano bar and Scala-meetup " description="Piano bar and Scala-meetup" startTime="1209045830156" organizer_id="2" location_id="4"/>
+	<event event_id="2" name="Stand-up festival " description="Stand-up festival" startTime="1259523541028" organizer_id="2" location_id="1" />
+	<event event_id="3" name="Concert with the Blodsbrøre" description="Concert with the Blodsbrøre" startTime="1455523541028" organizer_id="3" location_id="2" />
+    <event event_id="4" name="DJ Mario" description="DJ Mario" startTime="1455523541028" organizer_id="2" location_id="3" />
+
+</dataset>

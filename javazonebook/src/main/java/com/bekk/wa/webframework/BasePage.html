@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>Loadtesting with WebDriver and Grinder</title>
+    <link rel="stylesheet" href="./style/events.css"/>
+
+</head>
+<body>
+
+<div id="header" class="center">
+    <img title="Javazone - Forsiden" alt="Javazone 2010" src="style/gfx/logo.png">    
+</div>
+<div id="mainmenu">
+    <ul id="menu_list">
+        <li><a class="main-menu" wicket:id="linkToEventList" href="">ClubZone Events</a></li>
+        <li><a class="main-menu" wicket:id="addEvent" href="" name="add-event">Add event</a> </li>
+    </ul>
+</div>
+<div id="greyfield">
+    <div id="greyfield_content">
+        <span id="greyfield_text">events</span><br/>
+        <span id="greyfield_text2">@ ClubZone 2010;</span>
+    </div>
+</div>
+
+<div id="content">
+    <wicket:child/>
+</div>
+<div id="footer">
+    <span wicket:id="footer">footer</span>
+</div>
+</body>
+</html>

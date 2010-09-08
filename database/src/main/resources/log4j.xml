@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration>
+
+  <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+    <param name="Target" value="System.out" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="[%d{ISO8601}] %-5p %c %m %n" />
+    </layout>
+  </appender>
+
+  <category name="org.springframework">
+    <level value="ERROR" />
+  </category>
+
+  <category name="org.hibernate">
+    <level value="ERROR" />
+  </category>
+
+  <category name="com.bekk.wa.webframework">
+    <level value="ERROR" />
+  </category>
+
+  <root>
+    <level value="ERROR" />
+    <appender-ref ref="CONSOLE" />
+  </root>
+
+</log4j:configuration>

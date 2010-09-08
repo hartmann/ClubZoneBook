@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<location location_id="1" name="Bekk" description="Bekk Consulting AS er et norsk konsulentselskap som leverer rådgivnings-, teknologi- og forvaltningstjenester til store offentlige og private virksomheter" />
+	<location location_id="2" name="Tine" description="TINE BA er morselskapet i konsernet TINE Gruppa. Vårt formål er å drive næringsmiddelvirksomhet på samvirkebasis." />
+	<location location_id="3" name="Telenor" description="Telenor er en av verdens raskest voksende mobiloperatører. Telenor er også Nordens største distributør av TV-tjenester." />
+</dataset>

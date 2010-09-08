@@ -1,0 +1,17 @@
+<html xmlns:wicket="http://www.w3.org/1999/XSL/Transform">
+<wicket:head>
+    <title>Event form</title>
+    <link rel="stylesheet" href="../theme/events.css"/>
+</wicket:head>
+<wicket:extend>
+    <body>
+    <form wicket:id="event-form">
+        <input type="text" wicket:id="description"/>
+        <select wicket:id="location"/>
+        <select wicket:id="organizer"/>
+        <input wicket:id="save" type="submit" value="Save Event" class="button"/>
+    </form>
+    <div wicket:id="feedback" id="feedback">Feedback panelet kommer her</div>
+    </body>
+</wicket:extend>
+</html>

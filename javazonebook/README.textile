@@ -1,0 +1,6 @@
+This is an example application to demonstrate how it is possible use your functional webtests as loadtests using "Grinder.":http://grinder.sourceforge.net/
+
+The example uses WebDriver for the webtests.
+
+p. To run det loadtests automatically as part of the build use the following command:
+@mvn -Ploadtest integration-test@

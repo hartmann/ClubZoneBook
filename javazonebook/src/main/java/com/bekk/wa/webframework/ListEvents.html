@@ -1,0 +1,38 @@
+<html xmlns:wicket="http://www.w3.org/1999/XSL/Transform">
+<wicket:head>
+    <title>View events</title>
+</wicket:head>
+<wicket:extend>
+
+    <h1>ClubZone events</h1>
+    <hr>
+    <body>
+    <div id="eventform">
+        <form wicket:id="form">
+            <table class="data" id="eventList">
+                <thead>
+                <tr class="header">
+                    <th wicket:id="orderById">[id]</th>
+                    <th wicket:id="orderByDescription">[description]</th>
+                    <th wicket:id="orderByLocation">[location]</th>
+                    <th wicket:id="orderByOrganizer">[organizer]</th>
+                    <th><!-- --></th>
+                    <th><!-- --></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="eventlistrow" wicket:id="eventsData">
+                    <td><a href="#" wicket:id="edit-link"><span wicket:id="event.id"/></a></td>
+                    <td><span wicket:id="event.description"/></td>
+                    <td><span wicket:id="event.location"/></td>
+                    <td><span wicket:id="event.organizer"/></td>
+                    <td><input wicket:id="edit" type="submit"></td>
+                    <td><input wicket:id="delete" type="submit"></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    </body>
+</wicket:extend>
+</html>

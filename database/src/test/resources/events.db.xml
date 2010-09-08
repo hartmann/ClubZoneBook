@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+
+	<organizer organizer_id="1" name="Bekk" link="http://www.bekk.no" />
+	<organizer organizer_id="2" name="TTIF" link="http://www.ttif.no" />
+	<organizer organizer_id="3" name="Aftenposten" link="http://www.aftenposten.no" />
+	
+    <location location_id="1" name="Bekk" description="Bekk Consulting AS er et norsk konsulentselskap som leverer rådgivnings-, teknologi- og forvaltningstjenester til store offentlige og private virksomheter" />
+    <location location_id="2" name="Tine" description="TINE BA er morselskapet i konsernet TINE Gruppa. Vårt formål er å drive næringsmiddelvirksomhet på samvirkebasis." />
+    <location location_id="3" name="Telenor" description="Telenor er en av verdens raskest voksende mobiloperatører. Telenor er også Nordens største distributør av TV-tjenester." />
+
+	<event event_id="1" name="Oktoberfest" description="Fredagspils" startTime="1209045830156" organizer_id="1" location_id="1"/>
+	<event event_id="2" name="Lonningspils" description="Lønningspils" startTime="1259523541028" organizer_id="2" location_id="2" />
+	<event event_id="3" name="Tronderfest" description="Trønderfest" startTime="1455523541028" organizer_id="3" location_id="3" />
+
+</dataset>

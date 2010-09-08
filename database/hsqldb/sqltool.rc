@@ -1,0 +1,27 @@
+# $Id: sqltool.rc,v 1.14 2005/05/22 04:46:16 unsaved Exp $
+
+# This is a sample RC configuration file used by SqlTool, DatabaseManager,
+# and any other program that uses the org.hsqldb.util.RCData class.
+
+# You can run SqlTool right now by copying this file to your home directory
+# and running
+#    java -jar /path/to/hsqldb.jar mem
+# This will access the first urlid definition below in order to use a 
+# personal Memory-Only database.
+
+# If you have the least concerns about security, then secure access to
+# your RC file.
+# See the documentation for SqlTool for various ways to use this file.
+
+# A personal Memory-Only database.
+urlid mem
+url jdbc:hsqldb:mem:memdbid
+username sa
+password
+
+# This is for a hsqldb Server running with default settings on your local
+# computer (and for which you have not changed the password for "sa").
+urlid events
+url jdbc:hsqldb:hsql://localhost
+username sa
+password
