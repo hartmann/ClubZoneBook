@@ -27,7 +27,7 @@ public class EventWebTest {
     }
 
     @Test
-    public void skalLeggeTilEventOgInkludereDenIEventListen() {
+    public void shouldAddEventAndAddToEventList() {
         String eventName = "Vorspiel";
         EventListPage eventListPage = new EventListPage(driver);
         EditEventPage editEventPage = eventListPage.chooseAddEvent();
@@ -36,7 +36,7 @@ public class EventWebTest {
     }
 
     @Test
-    public void skalOppdatereEventMedSted() {
+    public void shouldUpdateEventWithLocation() {
         String eventName = "Stand-up festival";
         String location = "Cafe con Bar";
         EventListPage eventListPage = new EventListPage(driver);
@@ -46,7 +46,7 @@ public class EventWebTest {
     }
 
     @Test
-    public void skalSletteEvent() {
+    public void shouldDeleteEvent() {
         String eventName = "DJ Mario";
         EventListPage eventListPage = new EventListPage(driver);
         eventListPage.chooseDeleteEventWithName(eventName);
