@@ -33,11 +33,6 @@
     <dependencies>
         <!--  WICKET DEPENDENCIES -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.7</version>
-        </dependency>
-        <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-htmlunit-driver</artifactId>
             <version>2.0a4</version>
@@ -303,6 +298,6 @@
     <properties>
 		<wicket.version>1.4.9</wicket.version>
         <jetty.version>6.1.4</jetty.version>
-        <grinder.lib.path>/Users/oyvind kvangardsnes/Applications/grinder-3.4/lib/</grinder.lib.path>
+        <grinder.lib.path>/Users/vegard/projects/ClubZoneBook/javazonebook/src/test/lib/</grinder.lib.path>
     </properties>
 </project>
