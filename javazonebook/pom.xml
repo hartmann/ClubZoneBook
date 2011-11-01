@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-	  <parent>
+    <parent>
         <artifactId>javazone</artifactId>
         <groupId>no.bekk.javazone</groupId>
         <version>1.0-SNAPSHOT</version>
@@ -31,17 +31,27 @@
 
 
     <dependencies>
-        <!--  WICKET DEPENDENCIES -->
+                 <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>2.5.0</version>
+  </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.seleniumhq.selenium</groupId>-->
+            <!--<artifactId>selenium</artifactId>-->
+            <!--<version>2.0a4</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-htmlunit-driver</artifactId>
-            <version>2.0a4</version>
+            <version>2.5.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-firefox-driver</artifactId>
-            <version>2.0a4</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.seleniumhq.selenium</groupId>-->
+            <!--<artifactId>selenium-firefox-driver</artifactId>-->
+            <!--<version>2.0a4</version>-->
+        <!--</dependency>-->
+        <!--  WICKET DEPENDENCIES -->
         <dependency>
             <groupId>org.apache.wicket</groupId>
             <artifactId>wicket</artifactId>
@@ -73,14 +83,14 @@
             <artifactId>wicket-spring</artifactId>
             <version>${wicket.version}</version>
         </dependency>
-         
-         <!--  Applicacion DEPENDENCIES --> 
-         <dependency>
+
+        <!--  Applicacion DEPENDENCIES -->
+        <dependency>
             <groupId>com.bekk.wa.webframework</groupId>
             <artifactId>database</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-  
+
         <!-- LOGGING DEPENDENCIES - LOG4J -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -121,11 +131,7 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium</artifactId>
-            <version>2.0a4</version>
-        </dependency>
+
 
 
         <!-- grinder resources -->
@@ -294,9 +300,69 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>webtest</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>surefire-itest</id>
+                                <phase>integration-test</phase>
+                                <goals>
+                                    <goal>test</goal>
+                                </goals>
+                                <configuration>
+                                    <skip>false</skip>
+                                    <excludes>
+                                        <exclude>none</exclude>
+                                    </excludes>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.mortbay.jetty</groupId>
+                        <artifactId>maven-jetty-plugin</artifactId>
+                        <configuration>
+                            <stopKey>foo</stopKey>
+                            <stopPort>9999</stopPort>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>start-jetty</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                                    <daemon>true</daemon>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>stop-jetty</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>stop</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
     <properties>
-		<wicket.version>1.4.9</wicket.version>
+        <wicket.version>1.4.9</wicket.version>
         <jetty.version>6.1.4</jetty.version>
         <grinder.lib.path>/Users/vegard/projects/ClubZoneBook/javazonebook/src/test/lib/</grinder.lib.path>
     </properties>

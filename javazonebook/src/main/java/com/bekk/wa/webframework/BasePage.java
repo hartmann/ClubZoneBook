@@ -21,7 +21,7 @@ public class BasePage extends WebPage {
                 setResponsePage(new EventForm(new Event()));
             }
         });
-        add(new Label("footer", "JavaZoneBook ª"));
+        add(new Label("footer", "JavaZoneBook (c)"));
 
     }
 }

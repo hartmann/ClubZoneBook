@@ -90,7 +90,8 @@ public class EventListPage {
     private WebElement getButtonOfRow(String buttonSelector, WebElement row) {
         List<WebElement> inputElements = row.findElements(By.tagName("input"));
         for (WebElement input : inputElements) {
-            if (input.getValue().startsWith(buttonSelector)) {
+            System.out.println(input.getText());
+            if (input.getAttribute("value").startsWith(buttonSelector)) {
                 return input;
             }
         }

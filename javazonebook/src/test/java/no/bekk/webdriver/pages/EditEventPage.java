@@ -46,7 +46,7 @@ public class EditEventPage {
         for (WebElement option : options) {
             if (option.getText().equals(optionValue)) {
                 found = true;
-                option.setSelected();
+                option.click();
                 continue;
             }
         }

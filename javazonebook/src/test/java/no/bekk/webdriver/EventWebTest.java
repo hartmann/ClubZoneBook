@@ -6,6 +6,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import static junit.framework.Assert.assertFalse;
@@ -18,16 +20,16 @@ public class EventWebTest {
 
     @Before
     public void setUp() {
-        driver = new HtmlUnitDriver();
+//        driver = new HtmlUnitDriver();
         
 //        driver = new ChromeDriver();
-//        driver = new FirefoxDriver();
+        driver = new FirefoxDriver();
 
         driver.get("http://localhost:8080/javazonebook/events");
     }
 
     @Test
-    public void shouldAddEventAndAddToEventList() {
+    public void shouldAddEventToEventlist() {
         String eventName = "Vorspiel";
         EventListPage eventListPage = new EventListPage(driver);
         EditEventPage editEventPage = eventListPage.chooseAddEvent();
