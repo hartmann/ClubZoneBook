@@ -14,7 +14,7 @@ class TestRunner:
         log = grinder.logger.output
         out = grinder.logger.TERMINAL
 
-        testMethods = ["skalLeggeTilEventOgInkludereDenIEventListen", "skalOppdatereEventMedSted", "skalSletteEvent", ]
+        testMethods = ["shouldAddEventToEventlist", "shouldUpdateEventWithLocation", "shouldDeleteEvent", ]
 
         testNumber = 0
         for test in testMethods:
