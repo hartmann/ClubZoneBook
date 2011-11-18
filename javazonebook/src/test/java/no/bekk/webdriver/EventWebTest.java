@@ -26,13 +26,13 @@ public class EventWebTest {
     @Before
     public void setUp() {
 
-        driver = new HtmlUnitDriver();
+ //       driver = new HtmlUnitDriver();
 
 
 //        driver = new ChromeDriver();
-//        driver = new FirefoxDriver();
+        driver = new FirefoxDriver();
 
-        // driver = new SlowDriver(driver);
+         driver = new SlowDriver(driver);
 
         driver.get("http://localhost:8080/javazonebook/events");
     }
@@ -66,7 +66,7 @@ public class EventWebTest {
 
     @After
     public void tearDown() throws InterruptedException {
-//        Thread.sleep(SlowDriver.DELAY);
+        Thread.sleep(SlowDriver.DELAY);
         driver.quit();
     }
 
